@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MarvelHeroes"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".presentation.view.InformacoesHeroi"
+            android:exported="false" />
+        <activity
             android:name=".presentation.view.BuscaActivity"
             android:exported="true" />
         <activity
@@ -25,4 +28,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

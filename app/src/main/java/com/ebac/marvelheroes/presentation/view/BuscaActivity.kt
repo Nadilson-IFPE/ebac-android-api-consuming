@@ -1,5 +1,6 @@
 package com.ebac.marvelheroes.presentation.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -26,12 +27,15 @@ class BuscaActivity : AppCompatActivity() {
             val text = binding.barraPesquisa.text.toString()
 
             repository.buscarHeroiPorNome(text,
-                {
-                    val texto2 = it.data.results[0].description
-                    val duration = Toast.LENGTH_SHORT
+                { heroi ->
+                    val intent = Intent(this, InformacoesHeroi::class.java)
+                    val b = Bundle()
 
-                    val toast = Toast.makeText(applicationContext, texto2, duration)
-                    toast.show()
+                    b.putString("nome", heroi.data.results[0].name)
+                    b.putString("descricao", heroi.data.results[0].description)
+
+                    intent.putExtras(b)
+                    startActivity(intent)
                 },
                 {}
             )
