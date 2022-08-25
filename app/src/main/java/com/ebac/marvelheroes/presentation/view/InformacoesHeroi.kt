@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ebac.marvelheroes.databinding.ActivityInformacoesHeroiBinding
+import com.ebac.marvelheroes.presentation.view.adapter.RevistaAdapter
+import com.ebac.marvelheroes.presentation.view.adapter.SeriesAdapter
 
 class InformacoesHeroi : AppCompatActivity() {
 
@@ -23,12 +25,20 @@ class InformacoesHeroi : AppCompatActivity() {
         binding.nomeHeroi.text = nome
         binding.resumoHeroi.text = desc
 
-        val adapter = RevistaAdapter(
+        val adapterComics = RevistaAdapter(
             arrayListOf("Revista #1", "Revista #2", "Revista #3")
         )
 
-        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        binding.listaQuadrinhos.layoutManager = layoutManager
-        binding.listaQuadrinhos.adapter = adapter
+        val adapterSeries = SeriesAdapter(
+            arrayListOf("Série #1", "Série #2", "Série #3")
+        )
+
+        val layoutManagerComics = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.listaQuadrinhos.layoutManager = layoutManagerComics
+        binding.listaQuadrinhos.adapter = adapterComics
+
+        val layoutManagerSeries = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        binding.listaSeries.layoutManager = layoutManagerSeries
+        binding.listaSeries.adapter = adapterSeries
     }
 }

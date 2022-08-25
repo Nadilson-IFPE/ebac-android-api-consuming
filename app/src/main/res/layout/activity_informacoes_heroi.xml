@@ -17,33 +17,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:elevation="4dp"
+        app:title="Hero infos"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nome_heroi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/marvel_regular"
+        android:text="NOME HEROI"
+        android:textSize="48sp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        android:text="NOME HEROI"
-        android:fontFamily="@font/marvel_regular"
-        android:textSize="48sp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/resumo_heroi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/nome_heroi"
-        android:layout_margin="10dp"
+        android:layout_marginTop="40dp"
         android:text="DESCRICAO"
         android:fontFamily="@font/marvel_regular"
+        android:padding="20dp"
+        android:justificationMode="inter_word"
         />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/revistas_heroi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -53,7 +56,7 @@
         android:text="Quadrinhos"
         android:fontFamily="@font/marvel_regular"
         android:textSize="48sp"
-        android:layout_margin="10dp"
+        android:layout_marginTop="50dp"
         />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -63,7 +66,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/revistas_heroi"
-        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/series_heroi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listaQuadrinhos"
+        android:text="Series"
+        android:fontFamily="@font/marvel_regular"
+        android:textSize="48sp"
+        android:layout_marginTop="60dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listaSeries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/series_heroi"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

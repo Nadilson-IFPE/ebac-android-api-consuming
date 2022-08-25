@@ -1,4 +1,4 @@
-package com.ebac.marvelheroes.presentation.view
+package com.ebac.marvelheroes.presentation.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
