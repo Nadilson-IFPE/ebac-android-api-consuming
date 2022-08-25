@@ -24,11 +24,11 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="100dp"
         android:fontFamily="@font/marvel_regular"
         android:text="MARVEL"
-        android:textColor="#e23636"
-        android:textSize="120dp"
+        android:textColor="@color/marvel_red"
+        android:textSize="120sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.393"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         android:fontFamily="@font/marvel_regular"
         android:text="HEROES"
         android:textColor="#518cca"
-        android:textSize="60dp"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="@id/titulo"
         app:layout_constraintTop_toBottomOf="@id/titulo" />
 
